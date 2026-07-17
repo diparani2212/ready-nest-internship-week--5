@@ -1,7 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "cd frontend && npm install --production=false && npm run build",
-  "outputDirectory": "frontend/.next",
+  "buildCommand": "cd frontend && npm install --production=false && npm run build && (cp -R .vercel/output ../.vercel/output || cp -R .next ../.next || true)",
   "headers": [
     {
       "source": "/(.*)",
